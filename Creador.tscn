@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Creador.gd" type="Script" id=1]
+[ext_resource path="res://Asteroid.tscn" type="PackedScene" id=2]
+
+[node name="Creador" type="Node2D"]
+script = ExtResource( 1 )
+Asteroid = ExtResource( 2 )
+
+[node name="Esquerra" type="Position2D" parent="."]
+position = Vector2( 17, 310 )
+
+[node name="Dreta" type="Position2D" parent="."]
+position = Vector2( 1014, 303 )
+
+[node name="Timercreador" type="Timer" parent="."]
+
+[node name="Asteroidetocho" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="timeout" from="Timercreador" to="." method="_on_Timercreador_timeout"]
+[connection signal="timeout" from="Asteroidetocho" to="." method="_on_Asteroidetocho_timeout"]

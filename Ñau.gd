@@ -1,7 +1,7 @@
 extends KinematicBody2D
-var velocitat = 130
+var velocitat = 230
 var direccio = Vector2.UP
-var vel_gir = 4
+var vel_gir = 7
 
 func _ready():
 	pass

@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Ñau.gd" type="Script" id=1]
 [ext_resource path="res://nave-espacial-invasora.png" type="Texture" id=2]
+[ext_resource path="res://Dispar.tscn" type="PackedScene" id=3]
 
 [node name="Ñau" type="KinematicBody2D"]
 scale = Vector2( 0.2, 0.2 )
 script = ExtResource( 1 )
+Dispar = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -7 )

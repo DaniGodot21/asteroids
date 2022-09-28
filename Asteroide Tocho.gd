@@ -1,9 +1,9 @@
 extends Area2D
+
 var direccio = Vector2.UP
 var angle = 0
-var velocitat = 250
-var vida = 100
-
+var velocitat = 500
+var vida = 200
 func _ready():
 	randomize()
 	angle = rand_range(0,180)
@@ -14,13 +14,7 @@ func _physics_process(delta):
 	position.x = int(position.x) % 1024
 	position.y = int(position.y) % 600
 
-
 func hit(damage):
-	vida -= damage
+	vida -= 50
 	if vida <= 0:
 		queue_free()
-
-
-
-func _on_Asteroid_area_entered(dispar):
-	dispar.hit(20)

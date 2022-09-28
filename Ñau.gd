@@ -5,7 +5,7 @@ var vel_gir = 7
 export var Dispar: PackedScene
 var vida = 100
 func _ready():
-	pass
+	Global.Nau = self
 
 
 func _process(delta):
@@ -28,7 +28,8 @@ func crea_dispar():
 	nou_dispar.global_position = global_position
 	Global.Bales.add_child(nou_dispar)
 
-func hit():
-	vida -= 20
+func hit(mal):
+	self.vida-= mal
 	if vida <= 0:
 		queue_free()
+

@@ -7,6 +7,7 @@ export var Asteroid : PackedScene
 export var BigAsteroid : PackedScene
 
 func _ready():
+	Global.Creador = self
 	$Timercreador.start()
 	$Asteroidetocho.start()
 	

@@ -26,6 +26,8 @@ scale = 0.5
 color_ramp = SubResource( 7 )
 
 [node name="Asteroide Tocho" type="Area2D"]
+collision_layer = 8
+collision_mask = 3
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -44,3 +46,5 @@ lifetime = 0.4
 local_coords = false
 process_material = SubResource( 5 )
 texture = ExtResource( 3 )
+
+[connection signal="body_entered" from="." to="." method="_on_Asteroide_Tocho_body_entered"]

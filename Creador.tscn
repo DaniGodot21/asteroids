@@ -16,9 +16,10 @@ position = Vector2( 17, 310 )
 position = Vector2( 1014, 303 )
 
 [node name="Timercreador" type="Timer" parent="."]
+wait_time = 5.0
 
 [node name="Asteroidetocho" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 10.0
 
 [connection signal="timeout" from="Timercreador" to="." method="_on_Timercreador_timeout"]
 [connection signal="timeout" from="Asteroidetocho" to="." method="_on_Asteroidetocho_timeout"]

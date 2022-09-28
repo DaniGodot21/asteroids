@@ -12,7 +12,6 @@ func _ready():
 func _physics_process(delta):
 	global_position = global_position + direccio * velocitat * delta
 
-
 func _on_Dispar_area_entered(asteroid):
 	asteroid.hit(100)
 	queue_free()
